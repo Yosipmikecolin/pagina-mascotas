@@ -35,7 +35,7 @@ function ListarMascota(){
 
     function EliminarMascota(id){
 
-        fetch(`https://api-mascotas.vercel.app/delete/${id}`,{method:"DELETE"})
+        fetch(`https://api-mascotas.vercel.app/mascotas/delete/${id}`,{method:"DELETE"})
         .then(response => response.json())
         .then(data => {
 
