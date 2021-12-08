@@ -18,7 +18,7 @@ function EditarMascota(){
     function ActualizarMascota(e){
 
         e.preventDefault();
-         const promesa = fetch(`https://api-mascotas.vercel.app/update/${id}`,{method:"POST",headers: {"Content-type": "application/json"}, mode:"cors",body:JSON.stringify({nombre:valor.nombre,ano:valor.año,raza:valor.raza})})
+         const promesa = fetch(`https://api-mascotas.vercel.app/mascotas/update/${id}`,{method:"POST",headers: {"Content-type": "application/json"}, mode:"cors",body:JSON.stringify({nombre:valor.nombre,ano:valor.año,raza:valor.raza})})
         .then(response => response.json())
         .then(data => {
             if(data){
