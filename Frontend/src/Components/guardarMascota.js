@@ -15,7 +15,7 @@ function GuadarMascota(){
 
         e.preventDefault();
         
-        const promesa = fetch("http://localhost:4000/mascotas/add",{method:"POST",headers: {"Content-type": "application/json"}, mode:"cors",body: JSON.stringify({nombre: inputs.nombre ,año: inputs.año,raza:inputs.raza})})
+        const promesa = fetch("https://api-mascotas.vercel.app/mascotas/add",{method:"POST",headers: {"Content-type": "application/json"}, mode:"cors",body: JSON.stringify({nombre: inputs.nombre ,año: inputs.año,raza:inputs.raza})})
         .then(response => response.json())
         .then(data => {
            

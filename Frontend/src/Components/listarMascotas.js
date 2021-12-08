@@ -15,7 +15,7 @@ function ListarMascota(){
 
     useEffect(()=>{
 
-        const response = fetch("http://localhost:4000/mascotas")
+        const response = fetch("https://api-mascotas.vercel.app/mascotas")
         response.then(mascotas => mascotas.json())
         .then(res => SetData(res))
         .catch(e => console.log(e))
@@ -35,7 +35,7 @@ function ListarMascota(){
 
     function EliminarMascota(id){
 
-        fetch(`http://localhost:4000/mascotas/delete/${id}`,{method:"DELETE"})
+        fetch(`https://api-mascotas.vercel.app/delete/${id}`,{method:"DELETE"})
         .then(response => response.json())
         .then(data => {
 
